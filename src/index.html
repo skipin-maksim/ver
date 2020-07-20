@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>module-12</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-window">
+      <div class="style-rectangle">
+        <form class="verification-form" action="#" method="get">
+          <input
+            class="verification-form__input"
+            type="text"
+            name="user-login"
+            id="user-login"
+            placeholder="Введите логин"
+          />
+          <input
+            class="verification-form__input"
+            type="password"
+            name="user-pass"
+            id="user-pass"
+            placeholder="Введите пароль"
+          />
+
+          <button class="verification-form__btn">Войти</button>
+
+          <div class="wrapper-spinner desabled">
+            <div class="spinner"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div>
+      <p class="full-user-name"></p>
+      <button class="exit-btn">Выход</button>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
