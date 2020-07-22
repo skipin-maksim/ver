@@ -3,14 +3,14 @@ import refs from './refs';
 import toastr from 'toastr';
 import { spinnerOn } from './spinner';
 
-export { checkVerification, findLoginUser, addDesabledClassName };
+export { checkVerification, findLoginUser, addDisabledClassName };
 
 const promiseLogin = new Promise((resolve, reject) => {
   resolve(dataUsers);
 });
 
 /*
-  comment получает логин, ищет его в БД 
+  comment получает логин, ищет его в БД
  */
 function checkVerification(e) {
   event.preventDefault();
@@ -22,11 +22,11 @@ function checkVerification(e) {
     .then(boolean => {
       if (boolean) {
         spinnerOn();
-        refs.inputLogin.desabled;
-        refs.inputPassword.desabled;
+        refs.inputLogin.disabled;
+        refs.inputPassword.disabled;
 
         setTimeout(() => {
-          addDesabledClassName();
+          addDisabledClassName();
 
           refs.inputLogin.value = '';
           refs.inputPassword.value = '';
@@ -64,6 +64,6 @@ function findLoginUser(arr) {
   return isLoginOk && isPasswordOk ? true : false;
 }
 
-function addDesabledClassName() {
-  refs.loginWindow.classList.add('desabled');
+function addDisabledClassName() {
+  refs.loginWindow.classList.add('disabled');
 }

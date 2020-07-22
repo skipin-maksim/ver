@@ -5,7 +5,7 @@ refs.verificationBtn.addEventListener('click', checkVerification);
 refs.exitBtn.addEventListener('click', exitOfProgram);
 
 function exitOfProgram() {
-  refs.loginWindow.classList.remove('desabled');
-  refs.spinner.classList.add('desabled');
+  refs.loginWindow.classList.remove('disabled');
+  refs.spinner.classList.add('disabled');
   localStorage.removeItem('userNameOnline');
 }

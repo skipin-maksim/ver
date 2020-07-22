@@ -2,7 +2,7 @@
 import refs from './refs';
 
 function spinnerOn() {
-  refs.spinner.classList.remove('desabled');
+  refs.spinner.classList.remove('disabled');
 }
 
 export { spinnerOn };

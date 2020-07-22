@@ -1,25 +1,25 @@
-import toastr from 'toastr';
-import toastrSettings from './js/toaster-settings';
-import handlers from './js/handlers';
+// import toastr from 'toastr';
+// import debounce from 'lodash.debounce';
+
+import refs from './js/refs';
+import dataUsers from './bd-json/bd-users.json';
+import { addDisabledClassName } from './js/verification';
+
+import './js/toaster-settings';
+import './js/handlers';
 
 import './css/styles.css';
 import 'toastr/build/toastr.css';
 
-// const debounce = require('lodash.debounce');
-
-/*
-comment
-Проверяет LocalStorage на наличие Пользователя
-*/
-import refs from './js/refs';
-import dataUsers from './bd-json/bd-users.json';
-import { addDesabledClassName } from './js/verification';
+/**
+ * Проверяет LocalStorage на наличие Пользователя
+ */
 function getUserOfLocalStorage() {
   const localUser = localStorage.getItem('userNameOnline');
 
   dataUsers.find(elem => {
     if (elem.name === localUser) {
-      addDesabledClassName();
+      addDisabledClassName();
       refs.fullUserName.textContent = elem.fullName;
     }
   });
